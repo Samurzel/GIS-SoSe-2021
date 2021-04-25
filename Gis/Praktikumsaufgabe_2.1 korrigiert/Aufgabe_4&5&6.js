@@ -1,5 +1,4 @@
 "use strict";
-/*
 let x: string = "Hallo";
 console.log(x);
 func1(x);
@@ -85,7 +84,6 @@ console.log(factorial(5));
 
 
 //f)
-*/
 function leapyear() {
     let i;
     for (i = 1900; i <= 2020; i++)
