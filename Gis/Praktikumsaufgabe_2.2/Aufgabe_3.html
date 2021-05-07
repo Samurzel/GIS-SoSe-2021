@@ -1,0 +1,92 @@
+<!Doctype html>
+
+<html lang="de">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script language="javascript" type="text/javascript" src="Aufgabe_2.js"></script>
+
+
+    <meta charset="utf-8">
+
+    </head> 
+    <body>
+      <canvas id="myCanvas" width="1578" height="500"></canvas>
+      <script>
+        let canvas = document.getElementById('myCanvas');
+        let context = canvas.getContext('2d');
+  
+context.lineWidth = 7;
+
+
+
+//wiese
+context.beginPath();
+context.rect(0, 305, 760, 305);
+context.fillStyle = 'green';
+context.fill();
+
+//Berge
+context.beginPath();
+context.moveTo(0, 300);
+context.lineTo(150, 80);
+context.lineTo(300, 295);
+context.lineTo(375, 150);
+context.lineTo(450, 295);
+context.lineTo(600, 80);
+context.lineTo(750, 300);
+context.closePath();
+context.fillStyle = '#A4A4A4';
+context.fill();
+context.stroke();
+
+//wolke
+context.beginPath();
+context.moveTo(170, 80);
+context.bezierCurveTo(130, 100, 130, 150, 230, 150);
+context.bezierCurveTo(250, 180, 320, 180, 340, 150);
+context.bezierCurveTo(420, 150, 420, 120, 390, 100);
+context.bezierCurveTo(430, 40, 370, 30, 340, 50);
+context.bezierCurveTo(320, 5, 250, 20, 250, 50);
+context.bezierCurveTo(200, 5, 150, 20, 170, 80);
+
+context.closePath();
+context.lineWidth = 5;
+context.fillStyle = '#white';
+context.fill();
+context.stroke();
+
+//haus
+context.strokeRect(75, 340, 150, 110);
+context.fillStyle = 'black';
+context.fill();
+context.stroke();
+
+
+
+context.fillRect(130, 390, 40, 60);
+context.fillStyle = 'white';
+context.fill();
+context.stroke();
+
+
+
+context.beginPath();
+context.moveTo(50, 340);
+context.lineTo(150, 260);
+context.lineTo(250, 340);
+context.fillStyle = 'red';
+context.fill();
+context.closePath();
+context.stroke();
+
+
+
+context.stroke();
+      </script>
+    </body>
+  </html>      
+
+
+
+  
