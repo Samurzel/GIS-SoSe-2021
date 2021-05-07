@@ -16,11 +16,10 @@ var Aufgabe2;
     let cars = ["audi", "ford"];
     let motorcycles = ["kawasaki", "yamaha"];
     let x;
-    let array;
     function join() {
-        for (let i; i < motorcycles.length; i++) {
+        for (let i = 0; i < motorcycles.length; i++) {
             x = motorcycles[i];
-            array = cars.push(x);
+            cars.push(x);
         }
         console.log(cars);
     }
