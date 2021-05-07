@@ -8,6 +8,7 @@ function min(...outputs: number[]): number {
             val = outputs[i];
         }
     }
+    console.log(val);
     return val;
 }
 min(10, 3, 6, 8, 3);
@@ -17,9 +18,11 @@ min(10, 3, 6, 8, 3);
 function isEven(value: number): boolean {
     if (value <= 1) {
         if (value == 0) {
+            console.log("ist gerade");
             return true;
         }
         else if (value == 1) {
+            console.log("ist ungerade");
             return false;
         }
         else {
