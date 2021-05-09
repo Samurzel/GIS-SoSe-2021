@@ -1,0 +1,49 @@
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.bild {
+    margin: 10px;
+    height: 150px;
+    width: auto;
+}
+
+#speichern {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    padding: 15px;
+    margin-right: 5px;
+}
+
+#auswahl1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    padding: 15px;
+    margin-right: 5px;
+}
+
+#auswahl2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    padding: 15px;
+    margin-right: 5px;
+}
+
+#auswahl3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    padding: 15px;
+    margin-right: 5px;
+}
+
+#zurück{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    padding: 15px;
+    margin-right: 5px;
+}
+
