@@ -24,7 +24,8 @@ namespace Aufgabe02 {
     for (let i: number = 0; i < bilderKopf.length; i++) {
         let imgElem: HTMLImageElement = document.createElement("img");
         imgElem.src = bilderKopf[i];
-        imgElem.id = String(i + 1);
+        imgElem.id = String("Kopf Nummer" + i);
+        imgElem.alt = imgElem.id;
         imgElem.className = "bild";
         wrapper.appendChild(imgElem);
     }

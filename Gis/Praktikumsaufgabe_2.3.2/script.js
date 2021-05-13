@@ -17,10 +17,11 @@ var Aufgabe02;
     }
     //3b)
     let sim = new Sim();
-    for (let i = 0; i < bilderKopf.length; i++) {
+    for (let i = 0; i < Aufgabe02.bilderKopf.length; i++) {
         let imgElem = document.createElement("img");
-        imgElem.src = bilderKopf[i];
-        imgElem.id = String(i + 1);
+        imgElem.src = Aufgabe02.bilderKopf[i];
+        imgElem.id = String("Kopf Nummer" + i);
+        imgElem.alt = imgElem.id;
         imgElem.className = "bild";
         wrapper.appendChild(imgElem);
     }
