@@ -1,33 +1,44 @@
-namespace Aufgabe2 {
 
-    let abc: number[] = [1, 2, 3, 4, 5];
-    let cba: number[] = [1, 2, 3, 4, 5];
-    let u: number = 4;
-    function backwards(): void {
-        for (let i: number = 0; i < abc.length; i++) {
-            cba[u] = abc[i];
-            u--;
-        }
-        abc = cba;
-        console.log(abc);
+let abc: number[] = [1, 2, 3, 4, 5];
+
+function backwards(a: number[]): number[] {
+    let c: number[] = [];
+    for (let i: number = a.length - 1; i >= 0; i--) {
+        c.push(a[i]);
     }
-    backwards();
-
-
-
-
-    let cars: string[] = ["audi", "ford"];
-    let motorcycles: string[] = ["kawasaki", "yamaha"];
-    let x: string;
-
-    function join(): void {
-        for (let i: number = 0; i < motorcycles.length; i++) {
-            x = motorcycles[i];
-            cars.push(x);
-        }
-
-        console.log(cars);
-    }
-    join();
-
+    return c;
 }
+console.log(backwards(abc));
+
+
+//b)
+
+let cba: number[] = [10, 11, 23, 34, 56];
+
+
+function join(erstesArray: number[], zweitesArray: number[]): number[] {
+    let extraArray: number[] = [];
+    extraArray = erstesArray;
+
+    for (let i: number = 0; i < zweitesArray.length; i++) {
+        extraArray.push(zweitesArray[i]);
+    }
+    console.log(extraArray);
+    return extraArray;
+}
+
+join(abc, cba);
+
+
+//c)
+
+function split(array: number[], erster: number, zweiter: number): number[] { //Durch index out of Bounds Exceptions, die man custom werfen kann.
+    let platzhalter: number[] = [];
+    for (let i: number = erster; i <= zweiter; i++) {
+        platzhalter.push(array[i]);
+    }
+    console.log(platzhalter);
+    return platzhalter;
+}
+
+split(abc, 0, 2);

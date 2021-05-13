@@ -1,28 +1,33 @@
 "use strict";
-var Aufgabe2;
-(function (Aufgabe2) {
-    let abc = [1, 2, 3, 4, 5];
-    let cba = [1, 2, 3, 4, 5];
-    let u = 4;
-    function backwards() {
-        for (let i = 0; i < abc.length; i++) {
-            cba[u] = abc[i];
-            u--;
-        }
-        abc = cba;
-        console.log(abc);
+let abc = [1, 2, 3, 4, 5];
+function backwards(a) {
+    let c = [];
+    for (let i = a.length - 1; i >= 0; i--) {
+        c.push(a[i]);
     }
-    backwards();
-    let cars = ["audi", "ford"];
-    let motorcycles = ["kawasaki", "yamaha"];
-    let x;
-    function join() {
-        for (let i = 0; i < motorcycles.length; i++) {
-            x = motorcycles[i];
-            cars.push(x);
-        }
-        console.log(cars);
+    return c;
+}
+console.log(backwards(abc));
+//b)
+let cba = [10, 11, 23, 34, 56];
+function join(erstesArray, zweitesArray) {
+    let extraArray = [];
+    extraArray = erstesArray;
+    for (let i = 0; i < zweitesArray.length; i++) {
+        extraArray.push(zweitesArray[i]);
     }
-    join();
-})(Aufgabe2 || (Aufgabe2 = {}));
+    console.log(extraArray);
+    return extraArray;
+}
+join(abc, cba);
+//c)
+function split(array, erster, zweiter) {
+    let platzhalter = [];
+    for (let i = erster; i <= zweiter; i++) {
+        platzhalter.push(array[i]);
+    }
+    console.log(platzhalter);
+    return platzhalter;
+}
+split(abc, 0, 2);
 //# sourceMappingURL=Aufgabe_2.js.map
