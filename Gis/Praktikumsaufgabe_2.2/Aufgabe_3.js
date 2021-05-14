@@ -1,6 +1,7 @@
 "use strict";
 var Aufgabe_2_2_3;
 (function (Aufgabe_2_2_3) {
+    //a)
     let canvas = document.getElementById("myCanvas");
     let context = canvas.getContext("2d");
     context.lineWidth = 7;
@@ -67,56 +68,39 @@ var Aufgabe_2_2_3;
     drawBerge();
     drawWolke();
     drawHaus();
-    let r1 = { x1: 10, y1: 10, x2: 20, y2: 20, strokecolor: "red", fillcolor: "yellow" };
+    let r1 = { x1: 10, y1: 10, x2: 20, y2: 20, strokecolor: "red" };
     console.log(r1);
-    /*
-    
-    function randomX(): number {
-        let a: number = 750;
-        let i: number = Math.floor(Math.random() * a);
-    
-        let j: number = Math.floor(Math.random() * a + i);
-        console.log(i);
-        console.log(j);
-        return i;
-    }
-    
-    
-    
-    function randomY(): void {
-        let b: number = 250;
-        let i: number = Math.floor(Math.random() * b);
-    
-        let j: number = Math.floor(Math.random() * b + i);
-        console.log(i);
-        console.log(j);
-    }
-    
-    function createRect(): void {
-        context.fillStyle = "black";
-        randomX();
-        randomY();
-        context.strokeRect(10, 10, 20, 30);
-        context.fill();
-        context.stroke();
-    }
-    */
-    //c) & d)
     function getRandom(_min, _max) {
         return Math.floor(Math.random() * (_max - _min) + _min);
     }
+    //c)
     function createRect() {
-        context.strokeRect(Math.random() * 750, Math.random() * 250, Math.random() * 750, Math.random() * 250);
-        context.fillStyle = "black";
-        context.fill();
-        context.stroke();
+        let w = getRandom(50, 600);
+        let h = getRandom(50, 600);
+        let x = getRandom(0, 150);
+        let y = getRandom(0, 150);
         return {
             x1: w,
             y1: h,
             x2: x,
             y2: y,
-            strokecolor: context.fillStyle = "black",
+            strokecolor: context.fillStyle = "black"
         };
+    }
+    //d)
+    function drawRect(_r) {
+        context.fillStyle = "black";
+        context.beginPath();
+        context.rect(_r.x1, _r.y1, _r.x2, _r.y2);
+        context.fill();
+    }
+    //e)
+    let rectCreation = [];
+    for (let i = 0; i < 4; i++) {
+        rectCreation.push(createRect());
+    }
+    for (let i = 0; i < rectCreation.length; i++) {
+        drawRect(rectCreation[i]);
     }
 })(Aufgabe_2_2_3 || (Aufgabe_2_2_3 = {}));
 //# sourceMappingURL=Aufgabe_3.js.map

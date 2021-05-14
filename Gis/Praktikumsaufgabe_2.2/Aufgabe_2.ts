@@ -1,5 +1,5 @@
 
-let abc: number[] = [1, 2, 3, 4, 5];
+let abc: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 function backwards(a: number[]): number[] {
     let c: number[] = [];
@@ -41,4 +41,4 @@ function split(array: number[], erster: number, zweiter: number): number[] { //D
     return platzhalter;
 }
 
-split(abc, 0, 2);
+split(abc, 3, 7);

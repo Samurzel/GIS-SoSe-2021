@@ -1,5 +1,5 @@
 "use strict";
-let abc = [1, 2, 3, 4, 5];
+let abc = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 function backwards(a) {
     let c = [];
     for (let i = a.length - 1; i >= 0; i--) {
@@ -29,5 +29,5 @@ function split(array, erster, zweiter) {
     console.log(platzhalter);
     return platzhalter;
 }
-split(abc, 0, 2);
+split(abc, 3, 7);
 //# sourceMappingURL=Aufgabe_2.js.map
